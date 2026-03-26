@@ -109,7 +109,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#808080',
     alignItems: 'flex-direction',
     justifyContent: 'center',
     padding: 20,
@@ -129,7 +129,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   func: {
-    backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'flex-start',
     flexWrap: 'wrap',
@@ -137,14 +136,12 @@ const styles = StyleSheet.create({
     height: '100vh'
   },
   funcE: {
-    backgroundColor: 'blue',
     alignItems: 'stretch',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     flexDirection: 'column'
   },
   funcD: {
-    backgroundColor: 'pink',
     alignItems: 'stretch',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
@@ -158,5 +155,38 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     fontSize: '150px'
   }
+  bt_prog: {
+    backgroundColor: 'white',
+    width: '200px',
+    height: '150px',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
+    fontSize: '150px'
+  }
+ bt_todos: {
+    backgroundColor: 'white',
+    width: '200px',
+    height: '150px',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
+    fontSize: '150px'
+  }
+bt_concluidos: {
+    backgroundColor: 'white',
+    width: '200px',
+    height: '150px',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
+    fontSize: '150px'
+  }
+bt_sinal: {
+    backgroundColor: 'white',
+    width: '200px',
+    height: '150px',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
+    fontSize: '150px'
+  }
+
 });
 
