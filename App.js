@@ -13,23 +13,26 @@ function Home() {
     <View style={styles.container}>
       <View style={styles.func}>
         <View style={styles.funcE}>
-        <Button style={styles.bt_hoje} onPress={() => navigation.navigate('')}>
+        <Button style={styles.bt_hoje} onPress={() => navigation.navigate('Hoje')}>
           Hoje
         </Button>
-        <Button  style={styles.bt_prog} onPress={() => navigation.navigate('')}>
-          Programadores
+        <Button  style={styles.bt_prog} onPress={() => navigation.navigate('Programados')}>
+          Programados
         </Button>
-        <Button  style={styles.bt_todos} onPress={() => navigation.navigate('')}>
+        <Button  style={styles.bt_todos} onPress={() => navigation.navigate('Todos')}>
           Todos
         </Button>
         </View>
 
         <View style={styles.funcD}>
-        <Button style={styles.bt_concluidos} onPress={() => navigation.navigate('')}>
+        <Button style={styles.bt_concluidos} onPress={() => navigation.navigate('Concluidos')}>
           Concluídos
         </Button>
-        <Button  style={styles.bt_sinal} onPress={() => navigation.navigate('')}>
+        <Button  style={styles.bt_sinal} onPress={() => navigation.navigate('Sinalizados')}>
           Sinalizados
+        </Button>
+        <Button style={styles.bt_criar} onPress={() => navigation.navigate('CriarTarefa')}>
+        Criar tarefa
         </Button>
         </View> 
       </View>
@@ -38,17 +41,57 @@ function Home() {
         Criar tarefa
       </Button>
      
-
-      <Text>
-        Minhas Listas
-      </Text>
-
       <View style={styles.div}>
         
       </View>
 
 
     </View>
+  );
+}
+
+function TodoHoje() {
+  return (
+    <View style={styles.container}>
+      <Text>Tarefas Hoje</Text>
+    </View>
+  );
+}
+
+function TodoProgramados() {
+  return (
+    <View style={styles.container}>   
+      <Text>Tarefas Programadas</Text>
+    </View>
+  );
+}
+
+function TodoTodos() {
+  return (
+    <View style={styles.container}>   
+      <Text>Todas Tarefas</Text>
+    </View>
+  );
+}
+function TodoConcluidos() {
+  return (
+    <View style={styles.container}>   
+      <Text>Tarefas Concluídas</Text>
+    </View> 
+  );
+}
+function TodoSinalizados() {
+  return (
+    <View style={styles.container}> 
+      <Text>Tarefas Sinalizadas</Text>
+    </View> 
+  );
+}
+function CriarTarefa() {
+  return (
+    <View style={styles.container}> 
+      <Text>Criar Tarefa</Text>
+    </View> 
   );
 }
 
@@ -96,6 +139,13 @@ const MyStack = createStackNavigator({
   screens: {
     Login: TelaLogin,
     Home: Home,
+    Hoje: TodoHoje,
+    Programados: TodoProgramados,
+    Todos: TodoTodos,
+    sinalizados: TodoSinalizados,
+    Concluidos: TodoConcluidos,
+    Sinalizados: TodoSinalizados,
+    CriarTarefa: CriarTarefa,
     Profile: ProfileScreen,
   },
 });
@@ -109,7 +159,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#808080',
+    backgroundColor: '#4f4f4f',
     alignItems: 'flex-direction',
     justifyContent: 'center',
     padding: 20,
@@ -123,7 +173,7 @@ const styles = StyleSheet.create({
     width: '30%',
     height: 40,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#dedede',
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
@@ -133,60 +183,67 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    height: '100vh'
+    height: '100vh',    
   },
   funcE: {
     alignItems: 'stretch',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    gap: '20px',
+    marginBottom: '2000px',
+
   },
   funcD: {
     alignItems: 'stretch',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    gap: '20px',
+    marginLeft: '20px',
+
   },
   bt_hoje: {
     backgroundColor: 'white',
-    width: '200px',
-    height: '150px',
+    width: '150px',
+    height: '120px',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
-    fontSize: '150px'
-  }
+  },
   bt_prog: {
     backgroundColor: 'white',
-    width: '200px',
-    height: '150px',
+    width: '150px',
+    height: '120px',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
-    fontSize: '150px'
-  }
- bt_todos: {
+  },
+  bt_todos: {
     backgroundColor: 'white',
-    width: '200px',
-    height: '150px',
+    width: '150px',
+    height: '120px',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
-    fontSize: '150px'
-  }
-bt_concluidos: {
+  },
+  bt_concluidos: {
     backgroundColor: 'white',
-    width: '200px',
-    height: '150px',
+    width: '150px',
+    height: '120px',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
-    fontSize: '150px'
-  }
-bt_sinal: {
+  },
+  bt_sinal: {
     backgroundColor: 'white',
-    width: '200px',
-    height: '150px',
+    width: '150px',
+    height: '120px',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
-    fontSize: '150px'
+  },
+  bt_criar: {
+    backgroundColor: 'white',
+    width: '150px',
+    height: '120px',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
   }
-
 });
 
